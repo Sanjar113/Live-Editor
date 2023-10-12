@@ -2,11 +2,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    user-select: none;
 }
 
 .main {
     display: flex;
-    /* border-left: 2px solid #333; */
     overflow-y: hidden;
 }
 
@@ -16,3 +16,12 @@
     flex-direction: column;
     height: 100vh;
 }
+
+@media (max-width: 864px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {}

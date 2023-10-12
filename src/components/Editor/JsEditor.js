@@ -8,6 +8,7 @@ import AceEditor from 'react-ace';
 import 'brace/mode/javascript'
 import 'brace/theme/monokai'
 import 'brace/snippets/javascript'
+import './Editor.css'
 
 import { EditorContext } from '../../context/context';
 
@@ -18,9 +19,11 @@ export const JsEditor = () => {
     return (
         <div>
             <AceEditor
-                placeholder='Write your JavaScript code here!'
+                placeholder='Бул жерге JavaScript код жазыныз!'
                 mode="javascript"
-                theme="monokai"
+                theme="tomorrow"
+                width='100%'
+                height='calc(100vh - 70px)'
                 value={js}
                 onChange={(value) => { setJs(value) }}
                 name="editor_js"
@@ -36,6 +39,7 @@ export const JsEditor = () => {
                     enableSnippets: true,
                     cursorStyle: 'smooth',
                 }}
+
             />
 
         </div>

@@ -6,7 +6,7 @@ import { JsEditor } from '../Editor/JsEditor'
 
 
 export default function CodeBar() {
-    const [activeTab, setActiveTab] = useState('html')
+    const [activeTab, setActiveTab] = useState('css')
 
     return (
         <div className={styles.codebar}>
@@ -31,9 +31,9 @@ export default function CodeBar() {
             </nav>
 
             <div className={styles.editor}>
-                {activeTab === 'html' && <HtmlEditor />}
-                {activeTab === 'css' && <CssEditor />}
-                {activeTab === 'js' && <JsEditor />}
+                {activeTab === 'css' && <CssEditor className={styles.editor2} />}
+                {activeTab === 'html' && <HtmlEditor className={styles.editor1} />}
+                {activeTab === 'js' && <JsEditor className={styles.editor3} />}
             </div>
         </div>
     )

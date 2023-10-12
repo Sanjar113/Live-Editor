@@ -6,27 +6,30 @@ import AceEditor from 'react-ace';
 // Импортириуем данные из React Ace
 // import brace from 'brace'
 import 'brace/mode/html'
-import 'brace/theme/mono_industrial'
+import 'brace/theme/tomorrow'
 import 'brace/snippets/html'
 import 'brace/worker/html'
-
+import 'react-toastify/dist/ReactToastify.css'
 import { EditorContext } from '../../context/context';
-
 export const HtmlEditor = () => {
 
     const { html, setHtml } = useContext(EditorContext)
+    const [defaultValue, setDefaultValue] = useState(`<div>
+  <h1>Hello</h1>
+</div>`)
 
     return (
         <div>
             <AceEditor
-                placeholder='Write your HTML code here!'
+                placeholder='Бул жерге HTML код жазыныз!'
                 mode="html"
-
                 width='100%'
-                theme="monokai"
+                height='calc(100vh - 70px)'
+                theme="tomorrow"
                 name="editor_html"
                 value={html}
                 onChange={(value) => { setHtml(value) }}
+                defaultValue={defaultValue}
                 fontSize={18}
                 showPrintMargin={false}
                 showGutter={false}
@@ -40,7 +43,6 @@ export const HtmlEditor = () => {
                     cursorStyle: 'smooth',
                 }}
             />
-
         </div>
     )
 }

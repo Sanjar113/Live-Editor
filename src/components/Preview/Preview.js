@@ -30,7 +30,7 @@ export default function Preview() {
         <div className={styles.content}>
             {
                 document ? <iframe title='preview' className={styles.preview} srcDoc={document} /> :
-                    <div className={styles.loading}>Your code will be displayed here!</div>
+                    <div className={styles.loading}>Кодуңуз бул жерде көрсөтүлөт!</div>
             }
         </div>
     )

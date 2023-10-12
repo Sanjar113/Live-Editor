@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+    .edit {}
+}
+
+@media (max-width: 425px) {
+    .edit {
+        width: 425px;
+    }
+}

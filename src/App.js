@@ -1,4 +1,7 @@
 import React from "react";
+// Toast
+import { ToastContainer } from "react-toastify";
+
 import { EditorProvider } from "./context/context";
 import CodeBar from "./components/CodeBar/CodeBar";
 import styles from './App.module.css'
@@ -15,6 +18,9 @@ function App() {
           <Preview />
         </div>
       </div>
+      <ToastContainer
+        limit={1}
+      />
     </EditorProvider>
   );
 }
